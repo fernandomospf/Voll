@@ -1,20 +1,13 @@
-import { VStack, Image, Text, Box, FormControl, Input, Button, Link, Center } from 'native-base'
+import { VStack, Image, Text, Box, FormControl, Input, Button, Link} from 'native-base'
 import { TouchableOpacity } from 'react-native'
 import Logo from './assets/Logo.png'
+import { Title } from './components/Title/Title'
 
 export const  Login = () =>  {
     return (
         <VStack flex={1} alignItems="center" justifyContent="center" p={5}>
         <Image source={Logo} alt='Logo Voll'/>
-        <Text
-            fontSize="2xl"
-            fontWeight="bold"
-            color="gray.500"
-            textAlign="center"
-            marginTop={5}
-        >
-            Faça login em sua conta
-        </Text>
+        <Title text='Faça login em sua conta'/>
         <Box>
             <FormControl marginTop={3}>
                 <FormControl.Label>
@@ -48,6 +41,7 @@ export const  Login = () =>  {
             width="100%"
             bgColor="blue.800"
             borderRadius={'lg'}
+            marginBottom={2}
         >
             Entrar
         </Button>
@@ -55,7 +49,7 @@ export const  Login = () =>  {
             Esqueceu sua senha?
         </Link>
 
-        <Box width="100%" flexDirection="row" justifyContent="center">
+        <Box width="100%" flexDirection="row" justifyContent="center" marginTop={8}>
             <Text>Ainda não tem cadastro?</Text>
         <TouchableOpacity>
             <Text color={'blue.500'}> Faça seu cadastro!</Text>
