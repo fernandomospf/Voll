@@ -2,6 +2,7 @@ import { VStack, Image, Text, Box, FormControl, Input, Button, Link} from 'nativ
 import { TouchableOpacity } from 'react-native'
 import Logo from './assets/Logo.png'
 import { Title } from './components/Title/Title'
+import { ButtonVoll } from './components/ButtonVoll/ButtonVoll'
 
 export const  Login = () =>  {
     return (
@@ -36,15 +37,10 @@ export const  Login = () =>  {
                 />
             </FormControl>
         </Box>
-        <Button 
-            marginTop={10}
-            width="100%"
-            bgColor="blue.800"
-            borderRadius={'lg'}
+        <ButtonVoll 
+            text='Entrar'
             marginBottom={2}
-        >
-            Entrar
-        </Button>
+        />
         <Link href="https://www.google.com.br">
             Esqueceu sua senha?
         </Link>

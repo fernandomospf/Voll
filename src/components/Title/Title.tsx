@@ -1,20 +1,21 @@
-import { Text } from 'native-base'
+import { Text, ITextProps } from 'native-base'
 
-interface PropsTitle {
+interface PropsTitle extends ITextProps {
     text?: string;
     color?: string;
 }
 
-export const Title = (props: PropsTitle): React.JSX.Element => {
+export const Title = ({text, color, ...rest}: PropsTitle): React.JSX.Element => {
     return (
         <Text
             fontSize={'2xl'}
             fontWeight={'bold'}
-            color={ props.color || 'gray.500'}
+            color={ color || 'gray.500'}
             textAlign="center"
             marginTop={5}
+            {...rest}
         >
-            {props.text}
+            {text}
         </Text>
     )
 }
